@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230809075745">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+			</div>
+		</header>
+		<main class="page">
+			<form data-dev action="#" class="form" id="form">
+				<div class="form__body">
+					<h1 class="form__title">Отправка данных на почту</h1>
+					<div class="form__item">
+						<label for="formName" class="form__label">Имя*:</label>
+						<input id="formName" data-validate data-required autocomplete="off" type="text" name="form[name]" data-error="Ошибка" placeholder="Укажите Имя" class="form__input input">
+					</div>
+					<div class="form__item">
+						<label for="formEmail" class="form__label">Email*:</label>
+						<input id="formEmail" data-validate data-required="email" autocomplete="off" type="text" name="form[email]" data-error="Ошибка" placeholder="Укажите Почту" class="form__input input">
+					</div>
+					<div class="form__item">
+						<div class="form__label">Левша или правша?</div>
+						<div class="form__options options">
+							<div class="options__item">
+								<input id="o_1" class="options__input" checked type="radio" value="rightHande" name="option">
+								<label for="o_1" class="options__label"><span class="options__text">Правша</span></label>
+							</div>
+							<div class="options__item">
+								<input id="o_2" class="options__input" type="radio" value="leftHande" name="option">
+								<label for="o_2" class="options__label"><span class="options__text">Левша</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="form__item">
+						<label for="formMessage" class="form__label">Сообщение:</label>
+						<textarea data-validate data-required="text" id="formMessage" autocomplete="off" name="form[Message]" placeholder="Напишите сообщение" data-error="Ошибка" class="form__input input"></textarea>
+					</div>
+					<div class="form__item">
+						<div class="form__label">Возраст:</div>
+						<select name="form[age]" class="select">
+							<option value="от 18 до 25" selected>Молодой</option>
+							<option value="от 25 до 40">Старый</option>
+							<option value="от 45">Супер стар</option>
+						</select>
+					</div>
+					<div class="form__item">
+						<div class="form__label">Прикрепите фото</div>
+						<div class="file">
+							<div class="file__wrapper">
+								<div class="file__item">
+									<input id="formImage" accept=".jpg, .png, .gif" type="file" name="form[image]" data-error="Ошибка" class="file__input input">
+									<div class="file__button">Выбрать</div>
+								</div>
+							</div>
+							<div id="formPreview" class="file__preview"></div>
+						</div>
+					</div>
+					<div class="form__item">
+						<div class="checkbox">
+							<input data-validate id="c_1" data-error="Вы не даете согласие на обработку персональных данных?" checked class="checkbox__input" type="checkbox" name="form[agreement]">
+							<label for="c_1" class="checkbox__label"><span class="checkbox__text">Я даю согласие на обработку персональных данных в соотвествии с <a tabindex="-1" href="#">Условиями</a>*</span></label>
+						</div>
+					</div>
+					<button class="form__button" type="submit">Отправить</button>
+				</div>
+			</form>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230809075745"></script>
+</body>
+
+</html>
